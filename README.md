@@ -44,7 +44,7 @@ python3 ui.py
 
 示例：
 
-![demo1](D:\lessons\人工智能A\expert_system\readmeImg\demo1.png)
+![demo1](readmeImg\demo1.png)
 
 
 
@@ -142,7 +142,7 @@ THEN legs_mid_long
 
 初始时，用户没有进行选择，所以展示一张默认的动画片中的猫。并且由于现在本系统中猫的种类有限，若出现对于用户选择的特征没有匹配的猫，也将展示这张默认图片
 
-![demo_default](D:\lessons\人工智能A\expert_system\readmeImg\demo_default.png)
+![demo_default](readmeImg\demo_default.png)
 
 
 
@@ -150,7 +150,7 @@ THEN legs_mid_long
 
 金吉拉猫:
 
-![demo2](D:\lessons\人工智能A\expert_system\readmeImg\demo2.png)
+![demo2](readmeImg\demo2.png)
 
 
 
@@ -158,13 +158,13 @@ THEN legs_mid_long
 
 布偶猫:
 
-![demo3](D:\lessons\人工智能A\expert_system\readmeImg\demo3.png)
+![demo3](readmeImg\demo3.png)
 
 
 
 暹罗猫:
 
-![demo4](D:\lessons\人工智能A\expert_system\readmeImg\demo4.png)
+![demo4](readmeImg\demo4.png)
 
 
 
