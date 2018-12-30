@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Expert System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <script type="text/javascript" src="/eel.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
+  <script src="https://cdn.bootcss.com/element-ui/2.4.11/index.js"></script>
+  <link href="https://cdn.bootcss.com/element-ui/2.4.11/theme-chalk/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+
+  <style>
+    h3 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin: 0.25rem;
+      color: gray;
+      font-weight: 350;
+      font-size: 1rem;
+    }
+
+    .max-content {
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="avenir">
+    <h1 class="tc">Expert System</h1>
+    <div class="flex flex-auto justify-center">
+      <div class="max-content pa2 br b--moon-gray">
+        <h2>Problem</h2>
+        <div>
+          <h3>体型</h3>
+          <el-radio-group v-model="bodySize">
+            <el-radio label="big">大</el-radio>
+            <el-radio label="mid">中</el-radio>
+            <el-radio label="small">小</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>头的形状</h3>
+          <el-radio-group v-model="headShape">
+            <el-radio label="round">圆</el-radio>
+            <el-radio label="cuneiform">楔形</el-radio>
+            <el-radio label="equilateral_triangle">三角形</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>头的大小</h3>
+          <el-radio-group v-model="headSize">
+            <el-radio label="big">大</el-radio>
+            <el-radio label="mid">中</el-radio>
+            <el-radio label="small">小</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3 class="">是否肥胖</h3>
+          <el-radio-group v-model="fat">
+            <el-radio :label="true">是</el-radio>
+            <el-radio :label="false">否</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>腿</h3>
+          <el-radio-group v-model="legs">
+            <el-radio label="long">长</el-radio>
+            <el-radio label="mid">中</el-radio>
+            <el-radio label="short">短</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>毛</h3>
+          <el-radio-group v-model="hairLength">
+            <el-radio label="long">长</el-radio>
+            <el-radio label="mid">中</el-radio>
+            <el-radio label="short">短</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>尾巴</h3>
+          <el-radio-group v-model="tailLength">
+            <el-radio label="long">长</el-radio>
+            <el-radio label="mid">中</el-radio>
+            <el-radio label="short">短</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>眼睛形状</h3>
+          <el-radio-group v-model="eyesShape">
+            <el-radio label="round">圆</el-radio>
+            <el-radio label="almond">杏核</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>耳朵</h3>
+          <el-radio-group v-model="earsSize">
+            <el-radio label="big">大</el-radio>
+            <el-radio label="mid">中</el-radio>
+            <el-radio label="small">小</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>耳朵形状</h3>
+          <el-radio-group v-model="earsShape">
+            <el-radio label="round">圆</el-radio>
+            <el-radio label="pointed">尖</el-radio>
+          </el-radio-group>
+        </div>
+        <div>
+          <h3>性格</h3>
+          <el-radio-group v-model="temperament">
+            <el-radio label="sensitive">敏感型</el-radio>
+            <el-radio label="active">活泼型</el-radio>
+            <el-radio label="docile">温柔型</el-radio>
+          </el-radio-group>
+        </div>
+
+        <el-button type="primary" class="mt3 pv2 ph3 center" @click="handleClick">submit</el-button>
+      </div>
+      <div class="flex flex-column items-center ml3">
+        <h2>Result</h2>
+        <h3 class="pv2" v-if="name !== 'default'">{{name}}</h3>
+        <img width="512" :src="imageSrc">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      methods: {
+        handleClick() {
+          var { headShape, headSize, bodySize, fat, legs,
+    hairLength, tailLength, eyesShape, earsSize, earsShape, temperament} = this
+          submitData(headShape, headSize, bodySize, fat, legs,
+    hairLength, tailLength, eyesShape, earsSize, earsShape, temperament)
+        }
+      },
+      data: {
+        headShape: 'round',
+        headSize: 'big',
+        bodySize: 'big',
+        fat: true,
+        legs: 'long',
+        hairLength: 'long',
+        tailLength: 'long',
+        eyesShape: 'round',
+        earsSize: 'big',
+        earsShape: 'round',
+        temperament: 'sensitive',
+        imageSrc: '/image/default.jpg',
+        name: ''
+      }
+    })
+    function submitData(headShape, headSize, bodySize, fat, legs,
+    hairLength, tailLength, eyesShape, earsSize, earsShape, temperament) {
+      eel.receiveData(headShape, headSize, bodySize, fat, legs,
+    hairLength, tailLength, eyesShape, earsSize, earsShape, temperament)
+    }
+    eel.expose(receiveImg)
+    function receiveImg(cat) {
+      var img = '/image/' + cat + '.jpg'
+      console.log(img)
+      app.imageSrc = img
+      app.name = cat
+    }
+  </script>
+</body>
+
+</html>

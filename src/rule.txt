@@ -1,0 +1,483 @@
+IF head_size is small
+THEN head_size_small
+
+IF head_size is mid
+THEN head_size_mid
+
+IF head_size is big
+THEN head_size_big
+
+IF head_size_small
+OR head_size_mid
+THEN head_size_small_mid
+
+IF head_size_mid
+OR head_size_big
+THEN head_size_mid_big
+
+IF head_size_small
+OR head_size_mid
+OR head_size_big
+THEN head_size_small_mid_big
+
+IF body_size is small
+THEN body_size_small
+
+IF body_size is mid
+THEN body_size_mid
+
+IF body_size is big
+THEN body_size_big
+
+IF body_size_small
+OR body_size_mid
+THEN body_size_small_mid
+
+IF body_size_mid
+OR body_size_big
+THEN body_size_mid_big
+
+IF body_size_small
+OR body_size_mid
+OR body_size_big
+THEN body_size_small_mid_big
+
+IF legs is short
+THEN legs_short
+
+IF legs is mid
+THEN legs_mid
+
+IF legs is long
+THEN legs_long
+
+IF legs_short
+OR legs_mid
+THEN legs_short_mid
+
+IF legs_mid
+OR legs_long
+THEN legs_mid_long
+
+IF legs_short
+OR legs_mid
+OR legs_long
+THEN legs_short_mid_long
+
+IF hair_length is short
+THEN hair_length_short
+
+IF hair_length is mid
+THEN hair_length_mid
+
+IF hair_length is long
+THEN hair_length_long
+
+IF hair_length_short
+OR hair_length_mid
+THEN hair_length_short_mid
+
+IF hair_length_mid
+OR hair_length_long
+THEN hair_length_mid_long
+
+IF hair_length_short
+OR hair_length_mid
+OR hair_length_long
+THEN hair_length_short_mid_long
+
+IF tail_length is short
+THEN tail_length_short
+
+IF tail_length is mid
+THEN tail_length_mid
+
+IF tail_length is long
+THEN tail_length_long
+
+IF tail_length_short
+OR tail_length_mid
+THEN tail_length_short_mid
+
+IF tail_length_mid
+OR tail_length_long
+THEN tail_length_mid_long
+
+IF tail_length_short
+OR tail_length_mid
+OR tail_length_long
+THEN tail_length_short_mid_long
+
+IF ears_size is small
+THEN ears_size_small
+
+IF ears_size is mid
+THEN ears_size_mid
+
+IF ears_size is big
+THEN ears_size_big
+
+IF ears_size_small
+OR ears_size_mid
+THEN ears_size_small_mid
+
+IF ears_size_mid
+OR ears_size_big
+THEN ears_size_mid_big
+
+IF ears_size_small
+OR ears_size_mid
+OR ears_size_big
+THEN ears_size_small_mid_big
+
+IF head_shape is round
+AND body_size_mid
+AND fat is true
+AND legs_short
+AND hair_length_short
+AND tail_length_short
+AND eyes_shape is round
+AND ears_size_mid
+AND ears_shape is round
+AND temperament is docile
+THEN ScottishFold
+
+IF head_shape is round
+AND head_size_big
+AND body_size_mid_big
+AND fat is false
+AND legs_short
+AND hair_length_long
+AND tail_length_short
+AND eyes_shape is round
+AND ears_size_small
+AND ears_shape is round
+AND temperament is sensitive
+THEN PersianCat
+
+IF head_shape is cuneiform
+AND head_size_big
+AND body_size_big
+AND fat is false
+AND legs_mid
+AND hair_length_long
+AND tail_length_long
+AND eyes_shape is round
+AND ears_size_mid
+AND ears_shape is round
+AND temperament is docile
+THEN Ragdoll
+
+IF head_shape is round
+AND head_size_big
+AND body_size_mid_big
+AND legs_mid
+AND hair_length_short
+AND tail_length_mid
+AND eyes_shape is cuneiform
+AND ears_size_mid
+AND ears_shape is round
+AND temperament is docile
+THEN AmericanShorthair
+
+IF head_shape is cuneiform
+AND head_size_small
+AND body_size_mid_big
+AND fat is false
+AND legs_long
+AND hair_length_short
+AND tail_length_long
+AND eyes_shape is almond
+AND ears_size_big
+AND ears_shape is pointed
+AND temperament is active
+THEN Siamese
+
+IF head_shape is round
+AND head_size_big
+AND body_size_mid
+AND fat is true
+AND legs_mid
+AND hair_length_short
+AND tail_length_short
+AND eyes_shape is almond
+AND ears_size_mid
+AND ears_shape is round
+AND temperament is docile
+THEN DragonLi
+
+IF head_shape is round
+AND head_size_big
+AND body_size_mid_big
+AND fat is true
+AND legs_short_mid
+AND hair_length_short
+AND tail_length_short_mid
+AND eyes_shape is round
+AND ears_size_small_mid_big
+AND ears_shape is round
+AND temperament is docile
+THEN BritishShorthair
+
+IF head_shape is round
+AND head_size_big
+AND body_size_small_mid
+AND legs_short
+AND hair_length_long
+AND tail_length_short
+AND eyes_shape is round
+AND ears_size_small
+AND ears_shape is round
+AND temperament is active
+THEN Chinchilla
+
+IF head_shape is cuneiform
+AND head_size_big
+AND body_size_mid_big
+AND legs_long
+AND hair_length_mid_long
+AND tail_length_long
+AND eyes_shape is almond
+AND ears_size_big
+AND ears_shape is pointed
+THEN TurkishAngora
+
+IF head_shape is equilateral_triangle
+AND head_size_small_mid
+AND body_size_mid_big
+AND legs_short_mid
+AND hair_length_long
+AND tail_length_long
+AND eyes_shape is almond
+AND ears_size_mid_big
+AND ears_shape is round
+AND temperament is sensitive
+THEN NorwegianForestCat
+
+IF head_shape is round
+AND fat is true
+AND legs_short_mid
+AND hair_length_short_mid
+AND tail_length_short_mid
+AND eyes_shape is round
+AND ears_shape is round
+AND temperament is docile
+THEN ScottishFold
+
+IF head_shape is round
+AND head_size_mid_big
+AND body_size_mid_big
+AND legs_short_mid
+AND hair_length_mid_long
+AND tail_length_short_mid
+AND eyes_shape is round
+AND ears_size_small_mid
+AND ears_shape is round
+AND temperament is sensitive
+THEN PersianCat
+
+IF head_shape is cuneiform
+AND head_size_big
+AND body_size_big
+AND hair_length_long
+AND tail_length_long
+AND eyes_shape is round
+AND ears_shape is round
+AND temperament is docile
+THEN Ragdoll
+
+IF head_shape is round
+AND head_size_big
+AND body_size_mid_big
+AND hair_length_short
+AND eyes_shape is cuneiform
+AND ears_shape is round
+AND temperament is docile
+THEN AmericanShorthair
+
+IF head_shape is cuneiform
+AND head_size_small
+AND body_size_mid_big
+AND legs_long
+AND hair_length_short
+AND tail_length_long
+AND eyes_shape is almond
+AND ears_size_big
+AND ears_shape is pointed
+AND temperament is active
+THEN Siamese
+
+IF head_shape is round
+AND head_size_big
+AND hair_length_short
+AND tail_length_short
+AND eyes_shape is almond
+AND ears_shape is round
+AND temperament is docile
+THEN DragonLi
+
+IF head_shape is round
+AND head_size_big
+AND body_size_mid_big
+AND hair_length_short
+AND tail_length_short_mid
+AND eyes_shape is round
+AND ears_size_small_mid_big
+AND ears_shape is round
+AND temperament is docile
+THEN BritishShorthair
+
+IF head_shape is round
+AND head_size_mid_big
+AND body_size_small_mid
+AND legs_short_mid
+AND hair_length_long
+AND tail_length_short
+AND eyes_shape is round
+AND ears_size_small
+AND ears_shape is round
+AND temperament is active
+THEN Chinchilla
+
+IF head_shape is cuneiform
+AND head_size_mid_big
+AND body_size_mid_big
+AND legs_long
+AND hair_length_mid_long
+AND tail_length_long
+AND eyes_shape is almond
+AND ears_size_big
+AND ears_shape is pointed
+THEN TurkishAngora
+
+IF head_shape is equilateral_triangle
+AND head_size_small_mid
+AND body_size_mid_big
+AND hair_length_long
+AND tail_length_long
+AND eyes_shape is almond
+AND ears_size_mid_big
+AND ears_shape is round
+AND temperament is sensitive
+THEN NorwegianForestCat
+
+IF head_shape is round
+AND legs_short_mid
+AND hair_length_short_mid
+AND eyes_shape is round
+AND temperament is docile
+THEN ScottishFold
+
+IF head_shape is round
+AND body_size_mid_big
+AND legs_short_mid
+AND hair_length_mid_long
+AND eyes_shape is round
+AND temperament is sensitive
+THEN PersianCat
+
+IF head_shape is cuneiform
+AND body_size_big
+AND hair_length_long
+AND eyes_shape is round
+AND temperament is docile
+THEN Ragdoll
+
+IF head_shape is round
+AND body_size_mid_big
+AND hair_length_short
+AND eyes_shape is cuneiform
+AND temperament is docile
+THEN AmericanShorthair
+
+IF head_shape is cuneiform
+AND body_size_mid_big
+AND legs_long
+AND hair_length_short
+AND eyes_shape is almond
+AND temperament is active
+THEN Siamese
+
+IF head_shape is round
+AND hair_length_short
+AND eyes_shape is almond
+AND temperament is docile
+THEN DragonLi
+
+IF head_shape is round
+AND body_size_mid_big
+AND hair_length_short
+AND eyes_shape is round
+AND temperament is docile
+THEN BritishShorthair
+
+IF head_shape is round
+AND body_size_small_mid
+AND legs_short_mid
+AND hair_length_long
+AND eyes_shape is round
+AND temperament is active
+THEN Chinchilla
+
+IF head_shape is cuneiform
+AND body_size_mid_big
+AND legs_long
+AND hair_length_mid_long
+AND eyes_shape is almond
+THEN TurkishAngora
+
+IF head_shape is equilateral_triangle
+AND body_size_mid_big
+AND hair_length_long
+AND eyes_shape is almond
+AND temperament is sensitive
+THEN NorwegianForestCat
+
+IF legs_short_mid
+AND hair_length_short_mid
+AND temperament is docile
+THEN ScottishFold
+
+IF legs_short_mid
+AND hair_length_mid_long
+AND temperament is sensitive
+THEN PersianCat
+
+IF hair_length_long
+AND temperament is docile
+THEN Ragdoll
+
+IF hair_length_short
+AND eyes_shape is cuneiform
+AND temperament is docile
+THEN AmericanShorthair
+
+IF legs_long
+AND hair_length_short
+AND temperament is active
+THEN Siamese
+
+IF hair_length_short
+AND temperament is docile
+THEN DragonLi
+
+IF hair_length_short
+AND temperament is docile
+THEN BritishShorthair
+
+IF legs_short_mid
+AND hair_length_long
+AND temperament is active
+THEN Chinchilla
+
+IF legs_long
+AND hair_length_mid_long
+AND eyes_shape is almond
+THEN TurkishAngora
+
+IF hair_length_long
+AND temperament is sensitive
+THEN NorwegianForestCat
+
+IF head_shape is equilateral_triangle
+THEN NorwegianForestCat
